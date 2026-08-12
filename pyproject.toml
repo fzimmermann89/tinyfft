@@ -1,7 +1,7 @@
 [project]
 name = "tinyfft"
 version = "0.1.0"
-description = "Fast and clean n-dimensional FFT for tinygrad"
+description = "FFT and nonuniform FFT for tinygrad"
 readme = "README.md"
 license = "MIT"
 authors = [{ name = "Felix Zimmermann", email = "fzimmermann89@gmail.com" }]
@@ -10,7 +10,7 @@ dependencies = ["tinygrad>=0.14.0"]
 
 [dependency-groups]
 dev = ["numpy", "pytest", "pytest-xdist", "ruff", "mypy"]
-bench = ["numpy", "torch", "nvidia-cuda-nvrtc-cu12==12.6.*"]
+bench = ["numpy", "torch", "nvidia-cuda-nvrtc-cu12==12.6.*", "finufft", "cufinufft"]
 
 [tool.uv.sources]
 torch = { index = "pytorch-cu126" }
